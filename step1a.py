@@ -24,6 +24,7 @@ options = VarParsing('analysis')
 #                 VarParsing.VarParsing.varType.int,
 #                 'Random Seed')
 options.register('seed', default=None, mytype = VarParsing.varType.int)
+options.register('Nevents', default=None, mytype = VarParsing.varType.int)
 
 #options.register('filename',
 #                 'OutFile.root',
@@ -109,7 +110,8 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10),
+#    input = cms.untracked.int32(10),
+    input = cms.untracked.int32(options.Nevents),
     output = cms.optional.untracked.allowed(cms.int32,cms.PSet)
 )
 
