@@ -1,0 +1,7 @@
+production/error
+production/log
+production/output
+
+*.log
+*.err
+*.out

@@ -1,0 +1,11 @@
+executable            = test.sh
+arguments             = $(ClusterId) $(ProcId)
+output                = output/test.$(ClusterId).$(ProcId).out
+error                 = error/test.$(ClusterId).$(ProcId).err
+log                   = log/test.$(ClusterId).log
+output_destination    = root://eosuser.cern.ch//eos/cms/store/group/dpg_hgcal/comm_hgcal/hackathon/samples/condor_test/
+# transfer_output_files = step2_$(ClusterId)_$(ProcId).root
+# when_to_transfer_output = ON_EXIT_OR_EVICT
+RequestCpus           = 4
++JobFlavour           = "microcentury"
+queue 2

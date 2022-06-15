@@ -1,0 +1,10 @@
+executable            = close_by_single_gamma.sh
+arguments             = $(ClusterId) $(ProcId)
+output                = output/production.$(ClusterId).$(ProcId).out
+error                 = error/production.$(ClusterId).$(ProcId).err
+log                   = log/production.$(ClusterId).log
+output_destination    = root://eosuser.cern.ch//eos/cms/store/group/dpg_hgcal/comm_hgcal/hackathon/samples/close_by_single_gamma/condor_production/
+RequestCpus           = 4
++JobFlavour           = "longlunch"
++BenchmarkJob         = True
+queue 5000
