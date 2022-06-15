@@ -54,10 +54,6 @@ options.register('overlapping',
 
 options.register('PID',
                  11,
-<<<<<<< HEAD
-=======
-                 #VarParsing.VarParsing.multiplicity.singleton,
->>>>>>> 62dd59f (list for PID)
                  VarParsing.VarParsing.multiplicity.list,
                  VarParsing.VarParsing.varType.int,
                  'Integer, PID')
